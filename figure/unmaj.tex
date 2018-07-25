@@ -1,0 +1,19 @@
+\documentclass{jsarticle}
+\usepackage[dvipdfmx]{graphicx,color}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{qcircuit}
+\pagestyle{empty}
+
+\begin{document}
+
+\Qcircuit  {
+& \ctrl{1} & \qw & & 
+& \ctrl{1} & \targ & \ctrl{1} & \qw\\
+& \ctrl{1} & \qw & \push{\rule{.3em}{0em}=\rule{.3em}{0em}} & 
+& \ctrl{1} & \qw & \targ & \qw\\
+& \gate{UM} & \qw & & 
+&  \targ & \ctrl{-2} & \qw &\qw
+}
+
+\end{document}
