@@ -1,0 +1,81 @@
+\documentclass{jsarticle}
+\usepackage[dvipdfmx]{graphicx,color}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{qcircuit}
+\usepackage{comment}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{comment}
+\Qcircuit {
+& \lstick{c_{\text{in}}} & \qw & \qw & 
+\ctrl{1} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & 
+\\
+& \lstick{b_{0}} & \qw & \gate{X} & 
+\ctrl{1} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \meter & 
+\\
+& \lstick{a_{0}} & \qw & \gate{X} & 
+\gate{M} & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \gate{UM} & \qw & 
+\\
+& \lstick{b_{1}} & \qw & \qw & 
+\qw & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \meter & 
+\\
+& \lstick{a_{1}} & \qw & \gate{X} & 
+\qw & \gate{M} & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \gate{UM} & \qw & \qw & 
+\\
+& \lstick{b_{2}} & \qw & \gate{X} & 
+\qw & \qw & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \qw & \qw & \meter & 
+\\
+& \lstick{a_{2}} & \qw & \gate{X} & 
+\qw & \qw & \gate{M} & \ctrl{1} & \qw & \ctrl{1} & \gate{UM} & \qw & \qw & \qw & 
+\\
+& \lstick{b_{3}} & \qw & \gate{X} &
+\qw & \qw & \qw & \ctrl{1} & \qw & \ctrl{1} & \qw & \qw & \qw & \meter & 
+\\
+& \lstick{a_{3}} & \qw & \qw &
+\qw & \qw & \qw & \gate{M} & \ctrl{1} & \gate{UM} & \qw & \qw & \qw & \qw & 
+\\
+& \lstick{c_{\text{out}}} & \qw & \qw &
+\qw & \qw & \qw & \qw & \qw & \targ & \qw & \qw & \qw & \qw & \qw & 
+\\
+& 
+}
+\end{comment}
+
+\Qcircuit {
+& \lstick{c_{\text{in}}} & \qw & 
+\ctrl{1} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & 
+\\
+& \lstick{b_{0}} & \gate{X} & 
+\ctrl{1} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \meter & 
+\\
+& \lstick{a_{0}} & \gate{X} & 
+\gate{M} & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \gate{UM} & \qw & 
+\\
+& \lstick{b_{1}} & \qw & 
+\qw & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \meter & 
+\\
+& \lstick{a_{1}} & \gate{X} & 
+\qw & \gate{M} & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \gate{UM} & \qw & \qw & 
+\\
+& \lstick{b_{2}} & \gate{X} & 
+\qw & \qw & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \qw & \qw & \meter & 
+\\
+& \lstick{a_{2}} & \gate{X} & 
+\qw & \qw & \gate{M} & \ctrl{1} & \qw & \ctrl{1} & \gate{UM} & \qw & \qw & \qw & 
+\\
+& \lstick{b_{3}} & \gate{X} &
+\qw & \qw & \qw & \ctrl{1} & \qw & \ctrl{1} & \qw & \qw & \qw & \meter & 
+\\
+& \lstick{a_{3}} & \qw &
+\qw & \qw & \qw & \gate{M} & \ctrl{1} & \gate{UM} & \qw & \qw & \qw & \qw & 
+\\
+& \lstick{c_{\text{out}}} & 
+\qw & \qw & \qw & \qw & \qw & \targ & \qw & \qw & \qw & \qw & \meter & 
+\\
+}
+
+\end{document}
